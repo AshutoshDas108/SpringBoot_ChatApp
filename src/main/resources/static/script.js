@@ -13,7 +13,7 @@ stompClient.send("/app/message", {}, JSON.stringify(jsonOb))
 }
 
 function connect(){
-  let socket = new SockJS("/app/server1")
+  let socket = new SockJS("/server1")
   stompClient=Stomp.over(socket);
   stompClient.connect({}, function(frame){
 
