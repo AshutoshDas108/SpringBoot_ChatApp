@@ -16,7 +16,7 @@ function connect(){
   let socket = new SockJS("/server1")
   stompClient=Stomp.over(socket);
   stompClient.connect({}, function(frame){
-
+     setConnected(true);
      console.log("Connected : " + frame)
      $("#name-form").addClass('d-none')
        $("#chat-room").removeClass('d-none')
